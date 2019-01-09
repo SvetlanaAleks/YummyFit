@@ -1,0 +1,66 @@
+body
+	font-family: 'Roboto', Arial, Helvetica, sans-serif
+	font-size: 16px
+
+.block
+	+r(1199)
+		padding: 60px 0
+	+r(1023)
+		padding: 40px 0
+	+r(767)
+		padding: 30px 0
+	+r(479)
+		padding: 25px 0
+
+.title
+	font-size: 45px
+	line-height: 46px
+	text-align: center
+	font-weight: 900
+	margin: 0 auto
+	color: #313e47
+	+r(1199)
+		font-size: 36px
+		line-height: 37px
+	+r(1023)
+		font-size: 32px
+		line-height: 33px
+	+r(767)
+		font-size: 29px
+		line-height: 30px
+	+r(479)
+		font-size: 26px
+		line-height: 27px
+
+
+
+ul
+	list-style: none
+
+select:-moz-focusring, a:-moz-focusring
+	color: transparent
+	text-shadow: 0 0 0 #000
+
+*
+	&:focus, &:visited, &:active, &:hover
+		outline: 0 !important
+
+a
+	outline: 0 !important
+	&:focus, &:visited, &:active, &:hover
+		outline: 0 !important
+
+*::-moz-focus-inner
+	border: 0
+	outline: none
+
+
+
+
+// Font icons
+.fico
+	display: inline-block
+	font-size: 3rem
+	&::before
+		display: block
+
