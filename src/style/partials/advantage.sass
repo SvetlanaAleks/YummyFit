@@ -3,11 +3,20 @@
 	padding-bottom: 50px
 	&__title
 		margin-bottom: 53px
+		+r(1023)
+			margin-bottom: 40px
+		+r(767)
+			margin-bottom: 25px
 	&__content
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
 		margin-bottom: 30px
+		+r(1199)
+			margin-bottom: 25px
+		+r(1023)
+			flex-wrap: wrap
+			justify-content: space-around
 	&__item
 		width: 275px
 		text-align: center
@@ -16,8 +25,16 @@
 		line-height: 1.2
 		color: #2b3541
 		position: relative
+		+r(1199)
+			font-size: 19px
+		+r(1023)
+			font-size: 18px
+			&:nth-of-type(-n+2)
+				margin-bottom: 30px
 		&:nth-child(odd)
 			margin-top: 40px
+			+r(1023)
+				margin-top: 0
 		&::before
 			content: ''
 			display: block
@@ -28,8 +45,20 @@
 			background: #e9e9e9
 			left: 50%
 			z-index: -1
+			+r(1199)
+				top: -35px
+			+r(1023)
+				display: none
+				
 		.photo
 			margin-bottom: 31px
+			+r(1199)
+				max-width: 230px
+				width: 100%
+				margin-bottom: 25px
+			+r(1023)
+				margin-bottom: 10px
+				max-width: initial
 	&__result
 		text-align: center
 		.ttl
@@ -37,8 +66,16 @@
 			font-weight: 900
 			line-height: 46px
 			color: #de335e
+			+r(1199)
+				font-size: 32px
+			+r(1023)
+				font-size: 30px
 		.effect
 			font-size: 24px
 			font-weight: 500
 			line-height: 1.17
 			color: #2b3541
+			+r(1199)
+				font-size: 22px
+			+r(1023)
+				font-size: 20px
