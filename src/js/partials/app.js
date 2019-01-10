@@ -11,7 +11,13 @@ const App = (function () {
             cssEase: "linear",
             prevArrow: '<div class="arr arr--left"><i class="fico fico-arrow"></i></div>',
             nextArrow: '<div class="arr arr--right"><i class="fico fico-arrow"></i></div>',
-            autoplay: false
+            autoplay: false,
+            responsive: [{
+               breakpoint: 768,
+               settings: {
+                  adaptiveHeight: true
+               }
+            }, ]
          });
       },
       init: function () {
