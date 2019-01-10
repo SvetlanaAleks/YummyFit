@@ -3,7 +3,29 @@ img {
 }
 
 .reduce {
-	padding: 50px 0;
+	padding-top: 42px;
+	padding-bottom: 70px;
+	position: relative;
+}
+
+.reduce::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -45px;
+	height: 3rem;
+	width: 100%;
+	background: url('../img/line-top-white.png') no-repeat center top;
+}
+
+.reduce::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -45px;
+	height: 3rem;
+	width: 100%;
+	background: url('../img/line-bottom-white.png') no-repeat center bottom;
 }
 
 .title-reduce {
@@ -37,7 +59,7 @@ img {
 
 .reduce__right {
 	padding-left: 68px;
-    margin-left: 122px;
+	margin-left: 122px;
 	border-left: 1px solid #dddddd;
 }
 
@@ -47,6 +69,7 @@ img {
 	align-items: flex-start;
 
 	margin-bottom: 59px;
+
 	&:nth-child(2) {
 		margin-bottom: 50px;
 	}
@@ -57,6 +80,7 @@ img {
 	flex-shrink: 0;
 
 	margin-right: 10px;
+
 	img {
 		max-width: initial;
 	}
@@ -95,7 +119,8 @@ img {
 	z-index: 1;
 
 	margin-top: 52px;
-    margin-left: 59px;
+	margin-left: 59px;
+
 	&::before {
 		content: '+';
 
@@ -114,6 +139,7 @@ img {
 		top: 45%;
 		left: -25px;
 	}
+
 	&::after {
 		content: '=';
 
@@ -130,14 +156,14 @@ img {
 
 		position: absolute;
 		top: 45%;
-    	right: -92px;
+		right: -92px;
 	}
 }
 
 .reduce__glassful {
 	position: absolute;
-    top: -20px;
-    right: -44px;
+	top: -20px;
+	right: -44px;
 	z-index: -1;
 }
 
@@ -155,7 +181,8 @@ img {
 .reduce__girl {
 	position: absolute;
 	left: calc(50% - 149px);
-    bottom: -1px;
+	bottom: -1px;
+
 	img {
 		display: block;
 	}
@@ -170,6 +197,11 @@ img {
 }
 
 @include r(1199) {
+	.reduce {
+		padding-top: 15px;
+		padding-bottom: 22px;
+	}
+
 	.subtitle-reduce {
 		font-size: 21px;
 		margin-bottom: 60px;
@@ -180,8 +212,8 @@ img {
 	}
 
 	.reduce__right {
-    	padding-left: 28px;
-    	margin-left: 100px;
+		padding-left: 28px;
+		margin-left: 100px;
 	}
 
 	.reduce__prod {
@@ -197,6 +229,7 @@ img {
 
 	.reduce__item {
 		margin-bottom: 48px;
+
 		&:nth-child(2) {
 			margin-bottom: 30px;
 		}
@@ -215,6 +248,11 @@ img {
 
 @include r(1023) {
 
+	.reduce::before,
+	.reduce::after {
+		display: none;
+	}
+
 	.subtitle-reduce {
 		font-size: 19px;
 		margin-bottom: 45px;
@@ -231,6 +269,7 @@ img {
 
 	.reduce__img {
 		width: 120px;
+
 		img {
 			max-width: 100%;
 		}
@@ -240,6 +279,7 @@ img {
 		max-width: 270px;
 		margin-left: 5px;
 		margin-top: 55px;
+
 		&::before {
 			font-size: 40px;
 			line-height: 50px;
@@ -249,6 +289,7 @@ img {
 
 			left: 0;
 		}
+
 		&::after {
 			font-size: 40px;
 			line-height: 50px;
@@ -267,6 +308,7 @@ img {
 
 	.reduce__item {
 		margin-bottom: 45px;
+
 		&:nth-child(2) {
 			margin-bottom: 25px;
 		}
@@ -317,6 +359,7 @@ img {
 	.reduce__item {
 		align-items: center;
 		margin-bottom: 0;
+
 		&:nth-child(2) {
 			margin-bottom: 0;
 		}
@@ -338,6 +381,7 @@ img {
 			left: 170px;
 			top: -26%;
 		}
+
 		&::after {
 			right: -80px;
 
@@ -349,14 +393,14 @@ img {
 	}
 
 	.reduce__circle {
-	    width: 232px;
-	    height: 232px;
-	    margin-top: 125px;
+		width: 232px;
+		height: 232px;
+		margin-top: 125px;
 	}
 
 	.reduce__girl {
-	    max-width: 226px;
-	    left: calc(50% - 120px);
+		max-width: 226px;
+		left: calc(50% - 120px);
 	}
 }
 
@@ -369,10 +413,12 @@ img {
 
 	.reduce__prod {
 		margin: 55px auto 0;
+
 		&::before {
 			left: 50%;
 			transform: translateX(-50%);
 		}
+
 		&::after {
 			left: 50%;
 			transform: translateX(-50%);
@@ -416,9 +462,9 @@ img {
 
 	.reduce__mid {
 		border-bottom: 1px solid pink;
-    	border-top: 1px solid pink;
-    	margin-bottom: 20px;
-    	padding-bottom: 20px;
+		border-top: 1px solid pink;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -436,9 +482,11 @@ img {
 	}
 
 	.reduce__prod {
-	    margin: 55px calc(50% - 155px) 0;
-	    &::before,&::after {
-	    	left: 58%;
-	    }
+		margin: 55px calc(50% - 155px) 0;
+
+		&::before,
+		&::after {
+			left: 58%;
+		}
 	}
 }
