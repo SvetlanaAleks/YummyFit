@@ -1,0 +1,88 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$calendar-name: 'calendar'
+$calendar-x: 0px
+$calendar-y: 0px
+$calendar-offset-x: 0px
+$calendar-offset-y: 0px
+$calendar-width: 80px
+$calendar-height: 80px
+$calendar-total-width: 146px
+$calendar-total-height: 80px
+$calendar-image: '../img/sprite.png'
+$calendar: (0px, 0px, 0px, 0px, 80px, 80px, 146px, 80px, '../img/sprite.png', 'calendar', )
+$text-back-name: 'text-back'
+$text-back-x: 90px
+$text-back-y: 0px
+$text-back-offset-x: -90px
+$text-back-offset-y: 0px
+$text-back-width: 56px
+$text-back-height: 56px
+$text-back-total-width: 146px
+$text-back-total-height: 80px
+$text-back-image: '../img/sprite.png'
+$text-back: (90px, 0px, -90px, 0px, 56px, 56px, 146px, 80px, '../img/sprite.png', 'text-back', )
+$sp-sprite-width: 146px
+$sp-sprite-height: 80px
+$sp-sprite-image: '../img/sprite.png'
+$sp-sprite-sprites: ($calendar, $text-back, )
+$sp-sprite: (146px, 80px, '../img/sprite.png', $sp-sprite-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

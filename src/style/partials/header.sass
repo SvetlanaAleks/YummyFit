@@ -180,8 +180,17 @@
             display: block
     &__bottom
         width: 100%
-        background-color: #ffffff    
+        background-color: #ffffff
         padding: 25px 0 50px
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: -33px
+            height: 3rem
+            width: 100%
+            background: url('../img/line-top-white.png') no-repeat center top
     &__item
         display: flex
         justify-content: flex-end
