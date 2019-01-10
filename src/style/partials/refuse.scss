@@ -73,6 +73,10 @@
 	color: #757b82;
 }
 
+.form__btn-refuse {
+	max-width: 220px;
+}
+
 @include r(1199) {
 	.refuse__left {
 		width: 650px;
@@ -82,5 +86,112 @@
 
 	.refuse__prod {
 		max-width: 415px;
+	}
+
+	.refuse__do {
+		font-size: 29px;
+	}
+}
+
+@include r(1023) {
+	.refuse__left {
+		width: 475px;
+		flex-shrink: 0;
+		margin-right: 15px;
+	}
+
+	.refuse__prod {
+		max-width: 345px;
+	}
+
+	.refuse__list {
+		margin-top: 35px;
+		margin-bottom: 35px;
+	}
+
+	.refuse__item {
+		padding-left: 55px;
+		&::before {
+			font-size: 70px;
+		}
+	}
+
+	.refuse__do {
+		font-size: 25px;
+	}
+
+	.refuse__what {
+		font-size: 17px;
+	}
+}
+
+@include r(767) {
+	.refuse__wrap {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.refuse__left {
+		margin-right: 0;
+	}
+
+	.refuse__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: 25px;
+	}
+
+	.refuse__item {
+		margin: 0 10px 20px;
+		padding-left: 50px;
+	}
+
+	.form__btn-refuse {
+		margin: 0 auto;
+	}
+}
+
+@include r(639) {
+	.refuse__list {
+		align-items: flex-start;
+		justify-content: flex-start;
+		max-width: 270px;
+		margin: 25px auto 35px;
+	}
+
+	.refuse__left {
+		width: 100%;
+	}
+
+	.refuse__prod {
+		max-width: 325px;
+	}
+}
+
+@include r(479) {
+	.refuse__prod {
+		max-width: 245px;
+	}
+
+	.title-refuse {
+		margin-bottom: 0;
+	}
+
+	.refuse__left {
+		width: 310px;
+		background-position: 0 105px;
+	}
+
+	.refuse__list {
+		margin: 10px auto 25px;
+	}
+
+	.refuse__item {
+		&:before {
+			font-size: 60px;
+		}
 	}
 }
