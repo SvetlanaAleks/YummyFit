@@ -2,6 +2,9 @@
 //=require ../../node_modules/slick-carousel/slick/slick.min.js
 //=require partials/app.js
 
+$(function () {
+   objectFitImages();
+});
 
 $(document).ready(function () {
    App.init();
