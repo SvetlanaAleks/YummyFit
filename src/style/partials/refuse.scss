@@ -1,5 +1,5 @@
 .refuse {
-	padding: 50px 0;
+	padding: 42px 0 33px;
 	padding-top: 42px;
 	background: url(../img/bg-refuse.png) no-repeat calc(50% - 128px) 126px;
 	position: relative;
@@ -13,6 +13,16 @@
 	height: 3rem;
 	width: 100%;
 	background: url('../img/line-top-white.png') no-repeat center top;
+}
+
+.refuse::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -45px;
+	height: 3rem;
+	width: 100%;
+	background: url('../img/line-bottom-white.png') no-repeat center bottom;
 }
 
 .title-refuse {
@@ -112,7 +122,9 @@
 }
 
 @include r(1023) {
-	.refuse::before {
+
+	.refuse::before,
+	.refuse::after {
 		display: none;
 	}
 

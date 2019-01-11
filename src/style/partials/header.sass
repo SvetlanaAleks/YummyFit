@@ -4,6 +4,8 @@
     background-size: cover
     background-position: center center
     padding: 33px 0 60px
+    &--bottom
+        padding-top: 46px
     &__top
         display: flex
         width: 100%
@@ -191,6 +193,17 @@
             height: 3rem
             width: 100%
             background: url('../img/line-top-white.png') no-repeat center top
+        &-bot
+            position: relative
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                bottom: -12px
+                height: 3rem
+                width: 100%
+                background: url('../img/line-bottom-white.png') no-repeat center bottom
+                z-index: 1
     &__item
         display: flex
         justify-content: flex-end
