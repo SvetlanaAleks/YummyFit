@@ -84,12 +84,6 @@ a
 	justify-content: center
 	margin: auto
 	transition: all .3s
-	&:hover
-		&::after
-			border-color: #de335e rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
-	a
-		width: 30px
-		height: 30px
 	&::after
 		content: ''
 		display: block
@@ -100,9 +94,17 @@ a
 		border-width: 8px 7.5px 0
 		border-color: white rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
 		pointer-events: none
+	&:hover
+		&::after
+			border-color: #de335e rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
+	+r(1023)
+		display: none
 	&--white
 		background-color: white
 		&::after
 			border-color: #f8f3e8 rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
-	+r(1023)
-		display: none
+	a
+		width: 30px
+		height: 30px
+		+r(1023)
+			display: none

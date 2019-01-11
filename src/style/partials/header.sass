@@ -204,6 +204,9 @@
                 width: 100%
                 background: url('../img/line-bottom-white.png') no-repeat center bottom
                 z-index: 1
+            +r(1023)
+                &::before
+                    display: none
     &__item
         display: flex
         justify-content: flex-end
