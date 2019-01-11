@@ -81,8 +81,13 @@
 }
 
 @media screen and (max-width: 1199px) {
-    .journa {
-        padding-top: 100px;
+    .journal {
+        padding-top: 88px;
+        padding-bottom: 71px;
+    }
+
+    .journal__btn {
+        margin-bottom: 35px;
     }
 }
 

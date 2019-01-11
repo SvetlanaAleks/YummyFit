@@ -111,6 +111,11 @@
 }
 
 @media screen and (max-width: 1199px) {
+    .instruction {
+        padding-top: 17px;
+        padding-bottom: 90px;
+    }
+
     .instruction__text {
         width: 560px;
     }
