@@ -1,0 +1,142 @@
+.reviews
+	background: url('../img/rewiews_back.jpg') no-repeat center center
+	// background-size: cover
+	// background-color: #f7f2e8
+	&__title
+		margin-bottom: 40px
+		+r(1023)
+			margin-bottom: 25px
+		+r(767)
+			margin-bottom: 17px
+	.slide
+		width: 830px
+		margin: auto
+		display: flex
+		padding: 30px
+		background: white
+		border-radius: 8px
+		+r(1023)
+			padding: 20px
+			padding-right: 55px
+		+r(767)
+			padding: 15px
+			flex-direction: column
+		&__img
+			margin-right: 30px
+			width: 370px
+			height: 360px
+			+object-fit(cover)
+			+r(1023)
+				margin-right: 20px
+			+r(767)
+				margin: auto
+				width: 350px
+				height: 300px
+				+object-fit(contain)
+				margin-bottom: 15px
+			+r(639)
+				height: auto
+		&__content
+			.name
+				font-size: 24px
+				font-weight: 700
+				color: #2b3541
+				margin-bottom: 14px
+				display: inline-block
+				+r(1023)
+					margin-bottom: 10px
+					font-size: 22px
+				+r(767)
+					text-align: center
+					display: block
+			.ttl
+				font-size: 18px
+				font-weight: 500
+				line-height: 1.22
+				color: #2b3541
+				margin-bottom: 20px
+				+r(1023)
+					margin-bottom: 10px
+					font-size: 17px
+				+r(767)
+					text-align: center
+			.desc
+				font-size: 17px
+				line-height: 1.41
+				color: #757b82
+				+r(1023)
+					font-size: 16px
+					br
+						display: none
+				+r(639)
+					font-size: 15px
+			.darkish-pink, .squash
+				font-weight: 900
+	.slick-list
+		width: 830px
+		max-width: 100%
+		margin: auto
+		margin-bottom: 25px
+		+r(1023)
+			margin-bottom: 15px
+		+r(767)
+			margin-bottom: 10px
+	.arr
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background: #f5a918
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all .5s
+		cursor: pointer
+		position: absolute
+		top: 46%
+		transform: translateY(-50%)
+		z-index: 5
+		.fico
+			color: white
+			font-size: 20px
+		&:hover, &:focus
+			color: black
+			background: white
+			.fico
+				color: black
+		+r(767)
+			top: 30%
+		&--right
+			right: 138px
+			+r(1199)
+				right: 60px
+			+r(1023)
+				right: 5px
+			+r(767)
+				right: 5px
+
+		&--left
+			left: 138px
+			+r(1199)
+				left: 60px
+			+r(1023)
+				left: 5px
+			+r(767)
+				left: 5px
+			.fico
+				transform: rotate(180deg)
+	.slick-dots
+		display: flex
+		justify-content: center
+		li
+			cursor: pointer
+			height: 14px
+			width: 14px
+			border-radius: 50%
+			background-color: #f1ddc0
+			margin: 5px
+			border: 2px solid #ffffff
+		.slick-active
+			background-color: #ffcf2a
+
+		button
+			display: none
