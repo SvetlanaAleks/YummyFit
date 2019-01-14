@@ -95,4 +95,8 @@
 	}
 }
 
-@include r(479) {}
+@include r(479) {
+	.footer {
+		padding: 20px 0;
+	}
+}

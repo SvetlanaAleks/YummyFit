@@ -19,7 +19,7 @@
 }
 
 .title-dietolog {
-	max-width: 750px;
+	max-width: 770px;
 	margin-bottom: 10px;
 }
 
@@ -48,8 +48,19 @@
 	line-height: 1;
 	font-weight: 700;
 	color: #2b3541;
-
 	margin-bottom: 8px;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: rgb(245, 169, 24);
+		bottom: 3px;
+		z-index: -1;
+	}
 }
 
 .dietolog__position {
@@ -73,7 +84,7 @@
 	font-size: 18px;
 	line-height: 1.7;
 	color: #757b82;
-
+	width: 100%;
 	margin-bottom: 47px;
 }
 

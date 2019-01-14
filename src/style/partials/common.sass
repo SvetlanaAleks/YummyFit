@@ -85,27 +85,27 @@ a
 	justify-content: center
 	margin: auto
 	transition: all .3s
-	&::after
-		content: ''
-		display: block
-		position: absolute
-		width: 0
-		height: 0
-		border-style: solid
-		border-width: 8px 7.5px 0
-		border-color: white rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
-		pointer-events: none
+	.fico
+		color: white
+		font-size: 18px
 	&:hover
-		&::after
-			border-color: #de335e rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
+		.fico
+			color: #de335e
 	+r(1023)
 		display: none
 	&--white
 		background-color: white
-		&::after
-			border-color: #f8f3e8 rgba(255,255,255,0.000001) rgba(255,255,255,0.000001)
+		.fico
+			color: #f8f3e8
+		&:hover
+			.fico
+				color: #de335e
 	a
 		width: 30px
 		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
 		+r(1023)
 			display: none

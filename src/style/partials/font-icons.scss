@@ -29,18 +29,22 @@
 	content: "\E002";
 }
 
-.fico-comment:before {
+.fico-caret-down:before {
 	content: "\E003";
 }
 
-.fico-like:before {
+.fico-comment:before {
 	content: "\E004";
 }
 
-.fico-more:before {
+.fico-like:before {
 	content: "\E005";
 }
 
-.fico-upload:before {
+.fico-more:before {
 	content: "\E006";
+}
+
+.fico-upload:before {
+	content: "\E007";
 }

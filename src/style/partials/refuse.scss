@@ -121,6 +121,10 @@
 	.refuse__do {
 		font-size: 29px;
 	}
+
+	.form__btn-refuse {
+		margin-bottom: 5px !important;
+	}
 }
 
 @include r(1023) {

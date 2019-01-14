@@ -59,8 +59,14 @@
 			z-index: -1
 		&:nth-child(even)
 			margin-top: 80px
+		&:nth-child(2)
+			margin-top: 107px
+		&:nth-child(3)
+			margin-top: 22px
 		&:nth-child(4)
-			margin-top: 53px
+			margin-top: 114px
+		&:nth-child(5)
+			margin-top: -8px
 		&:nth-child(6)
 			margin-top: 74px
 		&:nth-of-type(-n+4)
@@ -69,17 +75,22 @@
 			width: 230px
 		+r(1023)
 			width: 215px
-			&:nth-child(even),&:nth-child(4), &:nth-child(6)
+			&:nth-child(even),&:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
 				margin-top: 0
-			&:nth-child(4)
+			&:nth-child(1)
 				position: relative
 				top: -18px
+			&:nth-child(4)
+				position: relative
+				top: 12px
 			&:nth-of-type(-n+6)
 				margin-bottom: 40px
 			&::before
 				display: none
 		+r(767)
 			width: 190px
+			&:nth-child(1), &:nth-child(4)
+				position: static
 		+r(639)
 			width: 215px
 			&:nth-of-type(-n+6)
