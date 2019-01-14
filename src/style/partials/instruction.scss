@@ -126,7 +126,10 @@
     .instruction__cont {
         flex-direction: column-reverse;
         align-items: center;
-
+        margin-top: 15px;
+    }
+    .instruction__product::before{
+        top: -37px;
     }
 }
 
