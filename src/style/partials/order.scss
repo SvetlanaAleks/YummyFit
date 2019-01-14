@@ -173,6 +173,14 @@
         content: none;
     }
 
+    .order__item-title {
+        margin-top: 5px;
+    }
+
+    .order__item-description {
+        margin-top: 5px;
+    }
+
     .order__item:nth-child(2),
     .order__item:nth-child(2n+1) {
         margin-top: 20px
