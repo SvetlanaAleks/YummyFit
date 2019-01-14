@@ -213,6 +213,7 @@
             font-style: italic
             margin-right: 72px
             position: relative
+            z-index: 5
             &:last-child
                 margin-right: 0
             &.one:before
@@ -277,8 +278,8 @@
             content: ''
             position: absolute
             left: 0
-            bottom: -149px
-            border: 132px solid transparent
+            bottom: -147px
+            border: 131px solid transparent
             border-top: 17px solid #fff5dd
     &__title
         font-size: 24px
@@ -307,6 +308,26 @@
                 font-size: 28px
                 font-weight: 400
                 color: #a2a1a1
+                & .x_price_previous
+                    position: relative
+                    &::before
+                        content: ''
+                        width: 100%
+                        height: 1px 
+                        background-color: #f68481
+                        position: absolute
+                        top: 50%
+                        left: 0
+                        transform: rotate(-12deg)
+                    &::after
+                        content: ''
+                        width: 100%
+                        height: 1px
+                        background-color: #f68481
+                        position: absolute
+                        top: 50%
+                        left: 0
+                        transform: rotate(12deg)       
                 & .x_currency
                     font-size: 16px
         &__after
@@ -419,6 +440,11 @@
         &_size
             font-size: 20px
             font-weight: 500
+        &:hover
+            &::before
+                display: none 
+        &:active
+            box-shadow: none           
     &__star-description
         margin-top: 20px
         font-size: 15px
@@ -441,11 +467,17 @@
             position: absolute
             left: 25px
             top: 15px
+       
 
 @media screen and (max-width: 1251px)
     .form::after
         content: none          
 
+@media screen and (max-width: 1199px) and (min-width: 1024px)
+    .header.block
+        padding: 33px 0 60px
+    .header--bottom.block
+        padding: 63px 0 60px
 @media screen and (max-width: 1199px)
     .header__title
         font-size: 44px
@@ -464,15 +496,18 @@
         left: -107px
         width: 308px
         top: 35px
-    .form
-        margin-top: -156px
     .header__item-link
         margin-right: 50px    
     .header__product-evening
         right: 110px
     .header__product-morning
         left: 85px    
+    .header__product-evening, .header__product-morning
+        top: 51px    
 
+@media screen and (max-width: 1023px) and (min-width: 768px)
+    .header.block
+        padding-bottom: 20px    
 @media screen and (max-width: 1023px)
     .header__food
         display: none
@@ -482,19 +517,25 @@
         margin-left: 0  
         flex-direction: column
         align-items: flex-start
-        width: auto
+        width: 350px
     .header__product
         position: relative
         top: -30px
         right: 0
     .header__title
-        font-size: 34px
+        font-size: 32px
         line-height: 38px
+    .header__title br 
+        display: none    
     .header__aboutUS
-        margin-top: 0
+        display: none
     .header__title_size
         font-size: 31px
-        margin-top: -15px    
+        margin-top: -15px   
+    .header__title_size br 
+        display: none     
+    .header__title_decoration-two
+        margin-left: 10px    
     .header__aboutUS-item
         width: 80px
         &:nth-child(4)
@@ -534,7 +575,18 @@
         margin-top: 15px    
     .header__bottom
         margin-top: -30px    
+    .header__title br
+        display: block    
+    .header__title_size br 
+        display: block
+    .header__title_decoration-two
+        margin-left: 0  
+    .header__bottom
+        padding: 35px 0      
 
+@media screen and (max-width: 767px) and (min-width: 640px)
+    .header.block
+        padding-bottom: 0       
 @media screen and (max-width: 639px)
     .header__title
         font-size: 27px
@@ -579,8 +631,12 @@
 
     .header__text-desc
         line-height: 20px   
-    
-
+    .header__description
+        width: auto
+    .header__product-evening, .header__product-morning
+        top: 36px
+    .header__bottom
+        padding: 30px 0
 @media screen and (max-width: 479px)
     .header__title
         font-size: 24px
@@ -597,3 +653,5 @@
 
     .header__item-link:nth-child(2)
         margin-top: 15px    
+    .header__bottom
+        padding: 25px 0    
