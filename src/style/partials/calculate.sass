@@ -1,8 +1,11 @@
 .calculate
 	padding-top: 42px
-	padding-bottom: 160px
+	padding-bottom: 96px
 	background: #f8f3e8
 	position: relative
+	+r(1199)
+		padding-top: 17px
+		padding-bottom: 90px
 	&::before
 		content: ''
 		display: block
@@ -12,11 +15,7 @@
 		width: 100%
 		background: url('../img/line-top.png') no-repeat center top
 		z-index: -1
-	+r(1199)
-		padding-top: 17px
-		padding-bottom: 90px
-	+r(1023)
-		&::before
+		+r(1023)
 			display: none
 	&__title
 		margin-bottom: 43px
@@ -291,8 +290,10 @@
 		line-height: 1
 		text-align: center
 		color: #2b3541
+		margin-bottom: 33px
 		+r(1023)
 			font-size: 30px
+			margin-bottom: 0
 		+r(767)
 			font-size: 24px
 		+r(639)

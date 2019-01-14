@@ -1,22 +1,37 @@
-.instruction{
-    padding: 50px 0;
+.instruction {
+    padding-top: 45px;
+    padding-bottom: 103px;
     background-image: url(../img/instruction_bg.jpg);
     background-size: cover;
-    
-    &__cont{
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -45px;
+        height: 3rem;
+        width: 100%;
+        background: url('../img/line-top-white.png') no-repeat center top;
+    }
+
+    &__cont {
         display: flex;
         justify-content: space-between;
         margin-top: 45px;
     }
-    &__product{
+
+    &__product {
         position: relative;
         width: 420px;
         z-index: 1;
-        & img{
+
+        & img {
             width: 100%;
             display: block;
         }
-        &::before{
+
+        &::before {
             content: '';
             width: 314px;
             height: 454px;
@@ -28,15 +43,18 @@
             background-size: 100% 100%;
         }
     }
-    &__text{
+
+    &__text {
         width: 730px;
     }
-    &__title{
+
+    &__title {
         font-size: 26px;
         color: #2b3541;
         font-weight: bold;
     }
-    &__description{
+
+    &__description {
         font-size: 20px;
         color: #2b3541;
         width: 527px;
@@ -44,17 +62,20 @@
         margin-top: 25px;
         font-weight: 500;
     }
-    &__warning{
+
+    &__warning {
         width: 100%;
         background-color: #fff;
         padding: 26px 33px 26px;
         margin-top: 24px;
-        &-title{
+
+        &-title {
             font-size: 26px;
             color: #2b3541;
             font-weight: 500;
         }
-        &-description{
+
+        &-description {
             margin-top: 22px;
             font-size: 18px;
             color: #757b82;
@@ -63,7 +84,8 @@
             padding-left: 53px;
             position: relative;
             width: 100%;
-            &::before{
+
+            &::before {
                 content: '!';
                 position: absolute;
                 font-size: 133px;
@@ -73,93 +95,117 @@
                 left: -6px;
                 top: 43px;
             }
-            &_color{
+
+            &_color {
                 color: #2b3541;
                 font-weight: 600;
             }
         }
     }
-    &__bg{
+
+    &__bg {
         width: 220px;
         margin: -14px auto 0;
     }
 }
 
-@media screen and (max-width: 1199px){
-    .instruction__text{
+@media screen and (max-width: 1199px) {
+    .instruction {
+        padding-top: 17px;
+        padding-bottom: 90px;
+    }
+
+    .instruction__text {
         width: 560px;
     }
-    .instruction__bg{
+
+    .instruction__bg {
         margin-top: 16px;
     }
-    .instruction__cont{
+
+    .instruction__cont {
         flex-direction: column-reverse;
         align-items: center;
 
     }
 }
 
-@media screen and (max-width: 1023px){
-    .instruction__cont{
+@media screen and (max-width: 1023px) {
+    .instruction::before {
+        display: none;
+    }
+
+    .instruction__cont {
         margin-top: 25px;
     }
-    .instruction__description{
+
+    .instruction__description {
         margin-top: 15px;
         font-size: 16px;
         line-height: 23px;
     }
-    .instruction__warning{
+
+    .instruction__warning {
         margin-top: 20px;
         padding: 0;
         background: inherit;
     }
-    .instruction__warning-description{
+
+    .instruction__warning-description {
         margin-top: 10px;
         font-size: 16px;
         line-height: 23px;
     }
-    .instruction__product::before{
+
+    .instruction__product::before {
         top: -31px;
     }
-    .instruction__product::before{
+
+    .instruction__product::before {
         width: 274px;
         height: 414px;
         top: -1px;
     }
 }
 
-@media screen and (max-width: 767px){
-    .instruction__text{
+@media screen and (max-width: 767px) {
+    .instruction__text {
         width: 100%;
     }
-    .instruction__description{
+
+    .instruction__description {
         width: 100%;
         margin-top: 10px;
     }
 }
 
-@media screen and (max-width: 639px){
-    .instruction__cont{
+@media screen and (max-width: 639px) {
+    .instruction__cont {
         margin-top: 10px;
     }
-    .instruction__warning{
+
+    .instruction__warning {
         margin-top: 10px;
     }
-    .instruction__description{
+
+    .instruction__description {
         margin-top: 5px;
     }
-    .instruction__warning-description{
+
+    .instruction__warning-description {
         padding-left: 33px;
     }
-    .instruction__warning-description br{
+
+    .instruction__warning-description br {
         display: none;
     }
 }
 
-@media screen and (max-width: 479px){
-    .instruction__product{
+@media screen and (max-width: 479px) {
+    .instruction__product {
         width: 270px;
     }
+
     .instruction__product::before {
         width: 144px;
         height: 264px;

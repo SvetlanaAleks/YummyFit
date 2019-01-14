@@ -4,7 +4,7 @@ img {
 
 .reduce {
 	padding-top: 42px;
-	padding-bottom: 70px;
+	padding-bottom: 8px;
 	position: relative;
 }
 
@@ -194,6 +194,7 @@ img {
 	font-weight: 700;
 	color: #2b3541;
 	text-align: center;
+	margin-bottom: 34px;
 }
 
 @include r(1199) {
@@ -327,6 +328,7 @@ img {
 
 	.reduce__bottom {
 		font-size: 25px;
+		margin-bottom: 0;
 	}
 }
 

@@ -3,6 +3,8 @@
 	position: relative
 	padding-top: 23px
 	padding-bottom: 120px
+	+r(1199)
+		padding-bottom: 80px
 	&::before
 		content: ''
 		display: block
@@ -11,9 +13,9 @@
 		height: 3rem
 		width: 100%
 		background: url('../img/line-top.png') no-repeat center top
-		+r(1023)
-			&::before
-				display: none
+	+r(1023)
+		&::before
+			display: none
 	&__title
 		margin-bottom: 40px
 		+r(1023)
@@ -38,6 +40,7 @@
 			width: 370px
 			height: 360px
 			+object-fit(cover)
+			flex-shrink: 0
 			+r(1023)
 				margin-right: 20px
 			+r(767)
