@@ -60,6 +60,7 @@
             font-size: 17px
             font-style: italic
             color: #757b82
+            margin-right: 13px
         &-item
             margin-right: 14px
         &-item:last-child
@@ -133,7 +134,7 @@
     &__product
         position: absolute
         right: -17px
-        top: -80px
+        top: -97px
         width: 396px
         z-index: 5
         & img 
@@ -153,8 +154,8 @@
             color: #ffffff
             font-weight: bold
             position: absolute
-            top: 81px
-            left: 111px
+            top: 221px
+            left: 52px
         &-evening
             width: 78px
             height: 78px
@@ -169,8 +170,8 @@
             color: #ffffff
             font-weight: bold
             position: absolute
-            top: 81px
-            right: 129px
+            top: 221px
+            right: 186px
     &__scales
         position: absolute
         bottom: -278px
@@ -431,15 +432,16 @@
         line-height: 0.9
         position: relative
         cursor: pointer
+        transition: all .3s
         &::before
-            content: ''
-            position: absolute
-            width: 198px
-            height: 2px
-            background-color: rgba(228,59,101,0.1)
-            box-shadow: 0px 4px 18px 0px rgba(228,59,101,0.8)
-            bottom: -7px
-            left: 13px
+            content: '';
+            position: absolute;
+            width: 198px;
+            height: 5px;
+            background-color: rgba(228,59,101,.1);
+            box-shadow: 0 8px 13px 0 rgba(228,59,101,0.5);
+            bottom: -1px;
+            left: 13px;
         &_size
             font-size: 20px
             font-weight: 500
@@ -447,7 +449,7 @@
             &::before
                 display: none 
         &:active
-            box-shadow: none           
+            box-shadow: none
     &__star-description
         margin-top: 20px
         font-size: 15px
@@ -502,11 +504,11 @@
     .header__item-link
         margin-right: 50px    
     .header__product-evening
-        right: 110px
+        right: 163px
     .header__product-morning
-        left: 85px    
+        left: 37px    
     .header__product-evening, .header__product-morning
-        top: 51px    
+        top: 191px    
 
 @media screen and (max-width: 1023px) and (min-width: 768px)
     .header.block
@@ -597,6 +599,10 @@
     .header.block
         padding-bottom: 0
 @media screen and (max-width: 639px)
+    .header__product-evening, .header__product-morning
+        width: 58px
+        height: 58px
+        font-size: 14px
     .header__title_size br
         display: block
     .header__title
@@ -618,9 +624,9 @@
         right: 8px
         top: -20px
     .header__product-morning 
-        left: 70px    
+        left: 49px    
     .header__product-evening
-        right: 69px  
+        right: 132px  
     .header__text-desc br 
         display: block 
     .header__text
@@ -646,7 +652,7 @@
     .header__description
         width: auto
     .header__product-evening, .header__product-morning
-        top: 36px
+        top: 196px
     .header__bottom
         padding: 30px 0
 @media screen and (max-width: 479px)

@@ -20,7 +20,7 @@
         bottom: -29px;
         height: 3rem;
         width: 100%;
-        background: url('../img/line-bottom-white.png') no-repeat center bottom;
+        background: url('../img/bottom_wave.png') no-repeat center bottom;
         transform: scale(-1, 1);
     }
 
@@ -64,6 +64,12 @@
             justify-content: center;
             align-items: center;
             background-color: #fff;
+
+            .woman {
+                max-width: initial;
+                border-radius: 50%;
+                border: 8px solid #fbf7ec;
+            }
         }
 
         &-title {
@@ -121,6 +127,11 @@
     .order__item-img {
         width: 220px;
         height: 220px;
+    }
+
+    .woman {
+        max-width: 100% !important;
+        border: none !important;
     }
 
     .order__item-img .width {

@@ -5,6 +5,8 @@
 	padding-bottom: 10px
 	+r(1199)
 		padding-bottom: 0
+		&::before
+			bottom: -4px
 	+r(1023)
 		background: #f7f2e8
 		&::before, &::after
@@ -13,7 +15,7 @@
 		content: ''
 		display: block
 		position: absolute
-		bottom: 77px
+		bottom: 61px
 		height: 3rem
 		width: 100%
 		background: url('../img/line-top-white.png') no-repeat center bottom
@@ -36,199 +38,17 @@
 			margin-bottom: 12px
 	&__slider
 		position: relative
+		width: 100%
 	.slide
-		background: white
-		width: 935px
+		width: 370px
 		max-width: 100%
-		height: 600px
-		margin: auto
-		display: flex
-		box-shadow: 0px 5px 16px 0 rgba(226, 226, 226, 0.75)
-		padding: 17px
-		align-items: stretch
+		box-shadow: 0px 5px 10px 0 rgba(226, 226, 226, 0.75)
 		outline: none
-		justify-content: space-between
-		+r(1023)
-			height: 530px
-		+r(767)
-			flex-direction: column
-			height: auto
-		+r(639)
-			padding: 10px
-		&__img
-			margin: auto
-			width: 500px
-			height: 580px
-			+object-fit(contain)
-			+r(1023)
-				width: 400px
-				height: 480px
-			+r(767)
-				height: auto
-				margin-bottom: 10px
-			+r(639)
-				margin-bottom: 20px
-			+r(479)
-				margin-bottom: 10px
-		&__content
-			display: flex
-			flex-direction: column
-			width: 300px
-			flex-shrink: 0
-			+r(1023)
-				width: 230px
-			+r(767)
-				width: 100%
-		.top
-			display: flex
-			align-items: center
-			padding-bottom: 18px
-			margin-bottom: 15px
-			border-bottom: 1px solid #efefef
-			+r(639)
-				margin-bottom: 10px
-				padding-bottom: 10px
-			&__product
-				margin-right: 13px
-			&__name
-				font-size: 12px
-				font-weight: 700
-				color: #262626
-				margin-right: 7px
-			&__subscribe
-				cursor: pointer
-				text-decoration: none
-				font-size: 13px
-				font-weight: 700
-				color: #5c9cda
-				padding-left: 10px
-				position: relative
-				&::before
-					content: ''
-					display: block
-					position: absolute
-					width: 3px
-					height: 3px
-					border-radius: 50%
-					background-color: #262626
-					left: 0
-					top: 50%
-					transform: translateY(-50%)
-		.main
-			flex-grow: 1
-			&__top
-				margin-bottom: 13px
-				.name
-					font-size: 12px
-					font-weight: 700
-					color: #262626
-					margin-right: 8px
-				.photo
-					font-size: 14px
-					color: #262626
-					margin-right: 3px
-				.nik
-					font-size: 14px
-					font-weight: 500
-					color: #495b6f
-			&__desc
-				font-size: 12px
-				line-height: 1.5
-				color: #000000
-				padding-top: 11px
-				position: relative
-				&::before
-					content: ''
-					display: block
-					position: absolute
-					width: 3px
-					height: 3px
-					border-radius: 50%
-					background-color: #262626
-					left: 0
-					top: 0
-				+r(1023)
-					br
-						display: none
-			&__hash
-				font-size: 12px
-				line-height: 1.5
-				color: #495b6f
-				margin-top: 24px
-				padding-top: 16px
-				position: relative
-				&::before
-					content: ''
-					display: block
-					position: absolute
-					width: 3px
-					height: 3px
-					border-radius: 50%
-					background-color: #262626
-					left: 0
-					top: 0
-				+r(639)
-					padding-top: 10px
-					margin-top: 10px
-		.bottom
-			+r(767)
-				margin-top: 20px
-			&__icons
-				padding-top: 10px
-				border-top: 1px solid #efefef
-				margin-bottom: 10px
-				display: flex
-				align-items: center
-				justify-content: flex-start
-				.fico
-					font-size: 24px
-					&:nth-of-type(-n+2)
-						margin-right: 15px
-					&-bookmark
-						margin-left: auto
-			&__count-like
-				font-size: 13px
-				font-weight: 500
-				color: #2d2d2d
-				margin-bottom: 10px
-				display: inline-block
-			&__date
-				display: block
-				font-size: 10px
-				color: #989898
-				padding-bottom: 10px
-				margin-bottom: 14px
-				text-transform: uppercase
-				border-bottom: 1px solid #efefef
-				+r(639)
-					margin-bottom: 10px
-			&__signin
-				display: flex
-				justify-content: space-between
-				+r(1023)
-					br
-						display: none
-				.text
-					font-size: 13px
-					line-height: 1.38
-					color: #999999
-					+r(479)
-						font-size: 12px
-				.color-blue
-					color: #506881
-				.fico-more
-					font-size: 1.2rem
-	.slick-list
-		padding: 15px
-		width: 935px
-		max-width: 100%
-		margin: auto
 		margin-bottom: 15px
-		+r(1023)
-			margin-bottom: 0
-		+r(767)
-			padding: 0
-			margin-bottom: 10px
+		margin: 10px
+		img
+			width: 300px
+			max-width: initial
 	.arr
 		width: 50px
 		height: 50px
@@ -240,7 +60,7 @@
 		transition: all .5s
 		cursor: pointer
 		position: absolute
-		top: 44%
+		top: 50%
 		transform: translateY(-50%)
 		z-index: 5
 		box-shadow: 0px 5px 16px 0 rgba(226, 226, 226, 0.75)
@@ -254,29 +74,23 @@
 			background: white
 			.fico
 				color: black
-		+r(1023)
-			top: 40%
-		+r(767)
-			top: 144px
 		+r(639)
-			top: 180px
 			width: 40px
 			height: 40px
 		+r(479)
 			box-shadow: none
-			top: 130px
 		&--right
-			right: 105px
+			right: -10px
 			+r(1199)
-				right: 24px
+				right: 0
 			+r(1023)
 				right: 0
 			+r(767)
 				right: 5px
 		&--left
-			left: 105px
+			left: -10px
 			+r(1199)
-				left: 24px
+				left: 0
 			+r(1023)
 				left: 0
 			+r(767)
@@ -288,13 +102,19 @@
 		justify-content: center
 		li
 			cursor: pointer
-			height: 12px
-			width: 12px
+			height: 14px
+			width: 14px
 			border-radius: 50%
 			background-color: #f1ddc0
 			margin: 5px
+			border: 2px solid #ffffff
 		.slick-active
 			background-color: #ffcf2a
-
 		button
 			display: none
+	.slick-list
+		+r(639)
+			width: 370px
+			margin: auto
+		+r(479)
+			width: 300px
